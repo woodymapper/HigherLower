@@ -14,7 +14,7 @@ int main()
 
     if (opcja == Card1)
     {
-        Console.WriteLine("Wgrałeś");
+        Console.WriteLine("Wygrałeś");
 
         if (Card1 < opcja) { Console.WriteLine("Liczba była mniejsza"); }
         else if (Card1 > opcja) { Console.WriteLine("Liczba była Większa"); }
@@ -22,7 +22,7 @@ int main()
     }
     else if (opcja != Card1)
     {
-        Console.WriteLine("przegrałeś ");
+        Console.WriteLine("Przegrałeś ");
         if (Card1 < opcja) { Console.WriteLine("Liczba była mniejsza"); }
         else if (Card1 > opcja) { Console.WriteLine("Liczba była Większa"); }
 
