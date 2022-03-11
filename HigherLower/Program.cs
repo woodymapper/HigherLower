@@ -1,65 +1,42 @@
-using System;
 
 
 
+    Random r = new Random();
+
+    int Card1 = r.Next(1, 10);
 
 
-class Program
-
+main();
+int main()
 {
+    int opcja;
+    opcja = Int32.Parse(Console.ReadLine());
 
-    static void CardType(int Card, int num)
-
+    if (opcja == Card1)
     {
+        Console.WriteLine("Wgrałeś");
 
-        switch (Card)
-
-        {
-
-            default: Console.WriteLine("Liczba była " + num + " była: " + Card + "."); break;
-
-        }
+        if (Card1 < opcja) { Console.WriteLine("Liczba była mniejsza"); }
+        else if (Card1 > opcja) { Console.WriteLine("Liczba była Większa"); }
 
     }
-
-    static void Main(string[] args)
-
+    else if (opcja != Card1)
     {
+        Console.WriteLine("przegrałeś ");
+        if (Card1 < opcja) { Console.WriteLine("Liczba była mniejsza"); }
+        else if (Card1 > opcja) { Console.WriteLine("Liczba była Większa"); }
 
-        bool p = true;
-
-        while (p)
-
-        {
-
-            Random r = new Random();
-
-            int Card1 = r.Next(1, 10);
-
-            int Card2 = r.Next(1, 10);          //randomowość
-
-            while (Card1 == Card2) Card2 = r.Next(1, 13);
-
-            CardType(Card1, 1);
-
-            Console.WriteLine("Czy liczby 1 jest (W)iększa czy (M)niejsza w porównaniu do liczby 2?(domyślnie jest higher):"); //pytanie
-
-            bool which = true; // higher to true lower to false
-
-            if (Console.ReadLine() == "M") which = false;
-
-            CardType(Card2, 2);
-
-            if (!which && Card2 > Card1 || which && Card1 > Card2) Console.WriteLine("Wygrałeś wpisz end aby zakończyć lub kontynuj."); //!which to false czyli lower 
-
-            else Console.WriteLine("Przegrałeś wpisz end aby zakończyć lub kontynuj.");
-
-            if (Console.ReadLine() == "end") p = false;
-
-        }
-
-        Console.WriteLine("GG");
-
+        main();
     }
 
+    return Card1;
 }
+
+
+
+
+
+
+
+
+
